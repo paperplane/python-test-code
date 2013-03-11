@@ -2,7 +2,7 @@ solution 1:
 
     from math import sqrt
     N = 100
-    [p for p in range(2,N) if 0 not in [p% d for d in range(2,int(sqrt(p)+1))]]
+    [p for p in range(2,N) if 0 not in [p%d for d in range(2,int(sqrt(p)+1))]]
 
 solution 2:
 
