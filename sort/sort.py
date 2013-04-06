@@ -7,7 +7,6 @@ def randdata():
     while i < num:
         arr.append(random.randint(0,100))
         i += 1 
-    print arr
     return arr
 
 
@@ -18,7 +17,6 @@ def bubble_sort(arr):
         for j in xrange(len(arr[i:])-1):
             if arr[j] > arr[j+1]:
                 arr[j],arr[j+1] = arr[j+1], arr[j]
-                print arr
     return arr
 
 def insert_sort(arr):
@@ -33,6 +31,16 @@ def insert_sort(arr):
         arr[j+1] = key
     return arr
 
+def select_sort(arr):
+    if len(arr)<2:
+        return arr
+    for i in range(len(arr)-1):
+        min = i
+        for j in range(i+1,len(arr)):
+            if arr[min] > arr[j]:
+                min = j
+        arr[i],arr[min] = arr[min],arr[i]
+    return arr
 
 def binsearch(arr,value):
     first = 0
